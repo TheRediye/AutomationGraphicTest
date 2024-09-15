@@ -1,0 +1,14 @@
+version: 1
+
+pipelines:
+  default:
+    steps:
+      - name: Install Dependencies
+        command: |
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+      - name: Run Application
+        command: |
+          source venv/bin/activate
+          gunicorn --bind 0.0.0.0:5000 app:app
