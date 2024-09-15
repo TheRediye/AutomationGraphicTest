@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Match Graphic</title>
+</head>
+<body>
+    <h1>Generate Match Graphic</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        <label for="match_id">Match ID:</label>
+        <input type="text" id="match_id" name="match_id" required>
+        <button type="submit">Generate Graphic</button>
+    </form>
+</body>
+</html>
